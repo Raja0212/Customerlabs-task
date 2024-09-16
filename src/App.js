@@ -26,7 +26,6 @@ function App() {
 
   const handleAddNewSchema = () => {
     if (selectedOption) {
-      // Add selected option to selectedSchemas and remove from availableOptions
       const newSchema = availableOptions.find(opt => opt.value === selectedOption);
       setSelectedSchemas([...selectedSchemas, newSchema]);
       setAvailableOptions(availableOptions.filter(opt => opt.value !== selectedOption));
@@ -41,7 +40,7 @@ function App() {
     };
 
     // Send data to webhook URL
-    const webhookUrl = 'YOUR_WEBHOOK_URL_HERE'; // Replace with your webhook URL from https://webhook.site
+    const webhookUrl = 'https://webhook.site'; 
     try {
       await fetch(webhookUrl, {
         method: 'POST',
@@ -55,7 +54,7 @@ function App() {
       console.error('Error saving segment:', error);
     }
 
-    // Close the popup
+   
     setIsPopupOpen(false);
     setIsButtonVisible(true)
   };

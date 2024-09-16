@@ -1,38 +1,111 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+
+.popup h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.schema-dropdowns {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #e9f7ff;
+  border: 1px dashed #007bff;
+  border-radius: 5px;
+}
+
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #f4f9ff;
+  color: #007bff;
+}
+
+
+button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.add-schema-link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+@media (max-width: 400px) {
+  .popup {
+      width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+      width: 100%;
+      padding: 8px;
+  }
+
+  select,
+  input[type="text"] {
+      width: 100%;
   }
 }
